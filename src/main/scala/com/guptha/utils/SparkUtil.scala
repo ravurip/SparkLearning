@@ -12,7 +12,8 @@ class SparkUtil extends ConfigLoader {
     println(runMode)
 
     try {
-      Logger.getLogger("org").setLevel(Level.TRACE)
+      
+      Logger.getLogger("org").setLevel(Level.ERROR)
       SparkSession.builder().master(runMode).appName(appName).getOrCreate()
 
     } catch {

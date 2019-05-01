@@ -9,9 +9,11 @@ object Learn {
 
     val spark: SparkSession = new SparkUtil().create("prad")
 
+    spark.read.text("C:\\Program Files\\MPC-HC\\Authors.txt").show(1000,false)
+
 //    println(config.isEmpty)
 //
-    System.in.read()
+//    System.in.read()
   }
 
 }
